@@ -1,0 +1,8 @@
+# Konfigurasi ini memberitahu Render untuk membangun Sidekick Bot dari Dockerfile.
+services:
+  - type: web
+    name: npepe-sidekick  # Nama layanan yang berbeda untuk menghindari konflik
+    env: docker          # Menginstruksikan Render untuk menggunakan Docker
+    plan: free
+    healthCheck:
+      path: /health/sidekick # Path health check yang unik untuk sidekick
